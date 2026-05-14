@@ -40,7 +40,7 @@ If you wish to run this project on your local machine, follow these steps:
    pip install -r requirements.txt
    streamlit run app.py
 
-   ├── EDA.ipynb               # Jupyter notebook with Data Analysis & Model Training
+├── EDA.ipynb               # Jupyter notebook with Data Analysis & Model Training
 ├── app.py                  # Streamlit web application code
 ├── requirements.txt        # Python dependencies
 ├── tuned_xgb_model.pkl     # Saved XGBoost model (Tuned)

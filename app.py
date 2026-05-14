@@ -10,38 +10,35 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Updated CSS with !important to force the background color
+# Updated CSS for professional Metrics
 st.markdown("""
     <style>
-    /* تغيير لون خلفية الموقع بالكامل */
-    .stApp {
+    .main {
         background-color: #f8f9fa;
     }
     
-    /* استهداف مربع النسبة بشكل عنيف لإجبار الخلفية تتغير */
-    div[data-testid="stMetric"], 
-    div[data-testid="metric-container"] {
-        background-color: #eef2f6 !important; /* اللون الأزرق الفاتح */
-        border: 1px solid #d1d9e6 !important;
-        padding: 15px !important;
-        border-radius: 12px !important;
-        box-shadow: 0px 4px 6px rgba(0,0,0,0.05) !important;
+    /* This targets the Metric Card container */
+    [data-testid="stMetric"] {
+        background-color: #eef2f6; /* Light Blue-Gray background */
+        border: 1px solid #d1d9e6; /* Soft border */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
     }
 
-    /* تغيير لون وحجم الخط للعنوان (الـ Label) */
-    div[data-testid="stMetricLabel"] > div {
+    /* Target the Metric Label (The text above the number) */
+    [data-testid="stMetricLabel"] > div {
         color: #495057 !important;
-        font-weight: bold !important;
+        font-weight: 600 !important;
         font-size: 16px !important;
     }
 
-    /* تغيير لون الخط للرقم أو النتيجة (الـ Value) */
-    div[data-testid="stMetricValue"] > div {
+    /* Target the Metric Value (The percentage or the status text) */
+    [data-testid="stMetricValue"] > div {
         color: #007bff !important;
         font-weight: 800 !important;
     }
 
-    /* تجميل زر التحليل */
     .stButton>button {
         width: 100%;
         border-radius: 8px;
@@ -50,12 +47,6 @@ st.markdown("""
         color: white;
         font-weight: bold;
         border: none;
-        transition: 0.3s;
-    }
-    
-    .stButton>button:hover {
-        background-color: #0056b3;
-        color: white;
     }
     </style>
     """, unsafe_allow_html=True)

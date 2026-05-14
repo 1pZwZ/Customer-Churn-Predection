@@ -10,25 +10,43 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for a professional look
+# Updated CSS for professional Metrics
 st.markdown("""
     <style>
     .main {
-        background-color: #f5f7f9;
+        background-color: #f8f9fa;
     }
+    
+    /* This targets the Metric Card container */
+    [data-testid="stMetric"] {
+        background-color: #eef2f6; /* Light Blue-Gray background */
+        border: 1px solid #d1d9e6; /* Soft border */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+    }
+
+    /* Target the Metric Label (The text above the number) */
+    [data-testid="stMetricLabel"] > div {
+        color: #495057 !important;
+        font-weight: 600 !important;
+        font-size: 16px !important;
+    }
+
+    /* Target the Metric Value (The percentage or the status text) */
+    [data-testid="stMetricValue"] > div {
+        color: #007bff !important;
+        font-weight: 800 !important;
+    }
+
     .stButton>button {
         width: 100%;
-        border-radius: 5px;
-        height: 3em;
+        border-radius: 8px;
+        height: 3.5em;
         background-color: #007bff;
         color: white;
         font-weight: bold;
-    }
-    .stMetric {
-        background-color: #ffffff;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        border: none;
     }
     </style>
     """, unsafe_allow_html=True)

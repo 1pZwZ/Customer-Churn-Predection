@@ -97,7 +97,7 @@ with tab1:
         
         with res_col2:
             status = "🚨 HIGH RISK" if prediction == 1 else "✅ LOW RISK"
-            st.metric(label="Customer Status", value=status)
+            st.metric(label="Customer Status", value=status, delta_color="red" if prediction == 1 else "green")
             
         st.divider()
         
